@@ -53,7 +53,8 @@ RUN R -e "install.packages('greta', repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('DiagrammeR', repos='http://cran.rstudio.com/')"
 
 ##INLA
-RUN R -e "install.packages('INLA',repos='https://inla.r-inla-download.org/R/stable', dep=TRUE)"
+#RUN R -e "install.packages('INLA',repos='https://inla.r-inla-download.org/R/stable', dep=TRUE)"
+RUN R -e "install.packages('INLA',repos='https://inla.r-inla-download.org/R/stable')"
 
 #Torch
 #install.packages("torch"); library(torch); torch::cuda_is_available()
