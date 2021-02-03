@@ -14,14 +14,14 @@ MAINTAINER Matt Weldy
 #RUN echo "RETICULATE_PYTHON = '/opt/venv/reticulate/bin/python'" > .Renviron
 
 #General R packages 
-#RUN R -e "install.packages('rgdal', repos='http://cran.rstudio.com/')"
-#RUN R -e "install.packages('rcppeigen', repos='http://cran.rstudio.com/')"
-#RUN R -e "install.packages('bayesplot', repos='http://cran.rstudio.com/')"
-#RUN R -e "install.packages('brms', repos='http://cran.rstudio.com/')"
-#RUN R -e "install.packages('tidybayes', repos='http://cran.rstudio.com/')"
-#RUN R -e "install.packages('coda', repos='http://cran.rstudio.com/')"
-#RUN R -e "install.packages('igraph', repos='http://cran.rstudio.com/')"
-#RUN R -e "install.packages('R6', repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('rgdal', repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('rcppeigen', repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('bayesplot', repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('brms', repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('tidybayes', repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('coda', repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('igraph', repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('R6', repos='http://cran.rstudio.com/')"
 
 ##Reticulate
 RUN R -e "install.packages('reticulate', repos='http://cran.rstudio.com/')"
