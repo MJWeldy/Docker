@@ -9,6 +9,10 @@
 FROM rocker/ml-verse:latest
 MAINTAINER Matt Weldy
 
+#USETHIS for github token
+# WRITE RETICULATE_PYTHON VARIABLE IN .Renviron
+#RUN echo "RETICULATE_PYTHON = '/opt/venv/reticulate/bin/python'" > .Renviron
+
 #General R packages 
 RUN R -e "install.packages('rgdal', repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('rcppeigen', repos='http://cran.rstudio.com/')"
@@ -21,6 +25,7 @@ RUN R -e "install.packages('R6', repos='http://cran.rstudio.com/')"
 
 ##Reticulate
 RUN R -e "install.packages('reticulate', repos='http://cran.rstudio.com/')"
+RUN echo "RETICULATE_PYTHON = '/opt/venv/reticulate/bin/python'" > .Renviron
 
 ##JAGS
 RUN apt-get update \
@@ -55,6 +60,9 @@ RUN R -e "install.packages('DiagrammeR', repos='http://cran.rstudio.com/')"
 ##INLA
 #RUN R -e "install.packages('INLA',repos='https://inla.r-inla-download.org/R/stable', dep=TRUE)"
 #RUN R -e "install.packages('INLA',repos='https://inla.r-inla-download.org/R/stable')"
+#RUN install2.r --error \
+#  --repos "https://inla.r-inla-download.org/R/stable" \
+#  INLA 
 
 #Torch
 #install.packages("torch"); library(torch); torch::cuda_is_available()
