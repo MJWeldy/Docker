@@ -24,8 +24,8 @@ MAINTAINER Matt Weldy
 #RUN R -e "install.packages('R6', repos='http://cran.rstudio.com/')"
 
 ##Reticulate
-#RUN R -e "install.packages('reticulate', repos='http://cran.rstudio.com/')"
-#RUN R -e "RETICULATE_PYTHON = '/opt/venv/reticulate/bin/python'" > .Renviron
+RUN R -e "install.packages('reticulate', repos='http://cran.rstudio.com/')"
+#RUN R echo "RETICULATE_PYTHON = '/opt/venv/reticulate/bin/python'" > .Renviron
 
 ##JAGS
 #RUN apt-get update \
