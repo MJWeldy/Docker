@@ -38,24 +38,24 @@ RUN R -e "install.packages('R2jags', repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('jagsUI', repos='http://cran.rstudio.com/')"
 
 ##Nimble
-RUN R -e "install.packages('nimble', repos='http://cran.rstudio.com/')"
+#RUN R -e "install.packages('nimble', repos='http://cran.rstudio.com/')"
 
 ##BUGS
-RUN wget -nd -P /tmp http://pj.freefaculty.org/Debian/squeeze/amd64/openbugs_3.2.2-1_amd64.deb
-RUN dpkg -i /tmp/openbugs_3.2.2-1_amd64.deb && rm /tmp/openbugs_3.2.2-1_amd64.deb 
+#RUN wget -nd -P /tmp http://pj.freefaculty.org/Debian/squeeze/amd64/openbugs_3.2.2-1_amd64.deb
+#RUN dpkg -i /tmp/openbugs_3.2.2-1_amd64.deb && rm /tmp/openbugs_3.2.2-1_amd64.deb 
 
-RUN R -e "install.packages('R2OpenBUGS', repos='http://cran.rstudio.com/')"
+#RUN R -e "install.packages('R2OpenBUGS', repos='http://cran.rstudio.com/')"
 
 ##Stan
-RUN R -e "install.packages('rstan', repos='http://cran.rstudio.com/')"
-RUN R -e "install.packages('rstantools', repos='http://cran.rstudio.com/')"
-RUN R -e "install.packages('rstanarm', repos='http://cran.rstudio.com/')"
+#RUN R -e "install.packages('rstan', repos='http://cran.rstudio.com/')"
+#RUN R -e "install.packages('rstantools', repos='http://cran.rstudio.com/')"
+#RUN R -e "install.packages('rstanarm', repos='http://cran.rstudio.com/')"
 
 #Greta 
-RUN R -e "install.packages('tensorflow', repos='http://cran.rstudio.com/')"
-RUN R -e "tensorflow::install_tensorflow()"
-RUN R -e "install.packages('greta', repos='http://cran.rstudio.com/')"
-RUN R -e "install.packages('DiagrammeR', repos='http://cran.rstudio.com/')"
+#RUN R -e "install.packages('tensorflow', repos='http://cran.rstudio.com/')"
+#RUN R -e "tensorflow::install_tensorflow()"
+#RUN R -e "install.packages('greta', repos='http://cran.rstudio.com/')"
+#RUN R -e "install.packages('DiagrammeR', repos='http://cran.rstudio.com/')"
 
 ##INLA
 #RUN R -e "install.packages('INLA',repos='https://inla.r-inla-download.org/R/stable', dep=TRUE)"
