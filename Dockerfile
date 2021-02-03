@@ -25,17 +25,17 @@ RUN R -e "install.packages('R6', repos='http://cran.rstudio.com/')"
 
 ##Reticulate
 RUN R -e "install.packages('reticulate', repos='http://cran.rstudio.com/')"
-RUN R -e "RETICULATE_PYTHON = '/opt/venv/reticulate/bin/python'" > .Renviron
+#RUN R -e "RETICULATE_PYTHON = '/opt/venv/reticulate/bin/python'" > .Renviron
 
 ##JAGS
-RUN apt-get update \
- && apt-get install -y --no-install-recommends \
-  jags \
-  mercurial gdal-bin libgdal-dev gsl-bin libgsl-dev \ 
-  libc6-i386
-RUN R -e "install.packages('rjags', repos='http://cran.rstudio.com/')"
-RUN R -e "install.packages('R2jags', repos='http://cran.rstudio.com/')"
-RUN R -e "install.packages('jagsUI', repos='http://cran.rstudio.com/')"
+#RUN apt-get update \
+# && apt-get install -y --no-install-recommends \
+#  jags \
+#  mercurial gdal-bin libgdal-dev gsl-bin libgsl-dev \ 
+#  libc6-i386
+#RUN R -e "install.packages('rjags', repos='http://cran.rstudio.com/')"
+#RUN R -e "install.packages('R2jags', repos='http://cran.rstudio.com/')"
+#RUN R -e "install.packages('jagsUI', repos='http://cran.rstudio.com/')"
 
 ##Nimble
 #RUN R -e "install.packages('nimble', repos='http://cran.rstudio.com/')"
