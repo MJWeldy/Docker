@@ -13,19 +13,22 @@ MAINTAINER Matt Weldy
 # WRITE RETICULATE_PYTHON VARIABLE IN .Renviron
 #RUN echo "RETICULATE_PYTHON = '/opt/venv/reticulate/bin/python'" > .Renviron
 
-#General R packages 
-RUN R -e "install.packages('rgdal', repos='http://cran.rstudio.com/')"
-RUN R -e "install.packages('rcppeigen', repos='http://cran.rstudio.com/')"
-RUN R -e "install.packages('bayesplot', repos='http://cran.rstudio.com/')"
-RUN R -e "install.packages('brms', repos='http://cran.rstudio.com/')"
-RUN R -e "install.packages('tidybayes', repos='http://cran.rstudio.com/')"
-RUN R -e "install.packages('coda', repos='http://cran.rstudio.com/')"
-RUN R -e "install.packages('igraph', repos='http://cran.rstudio.com/')"
-RUN R -e "install.packages('R6', repos='http://cran.rstudio.com/')"
-
 ##Reticulate
 RUN R -e "install.packages('reticulate', repos='http://cran.rstudio.com/')"
 #RUN R echo "RETICULATE_PYTHON = '/opt/venv/reticulate/bin/python'" > .Renviron
+
+# adding deps separately so it may build in dockerhub (works on my WS)
+RUN apt-get install -y r-cran-rcpp r-cran-rcppeigen
+
+#General R packages 
+#RUN R -e "install.packages('rgdal', repos='http://cran.rstudio.com/')"
+#RUN R -e "install.packages('rcppeigen', repos='http://cran.rstudio.com/')"
+#RUN R -e "install.packages('bayesplot', repos='http://cran.rstudio.com/')"
+#RUN R -e "install.packages('brms', repos='http://cran.rstudio.com/')"
+#RUN R -e "install.packages('tidybayes', repos='http://cran.rstudio.com/')"
+#RUN R -e "install.packages('coda', repos='http://cran.rstudio.com/')"
+#RUN R -e "install.packages('igraph', repos='http://cran.rstudio.com/')"
+#RUN R -e "install.packages('R6', repos='http://cran.rstudio.com/')"
 
 ##JAGS
 #RUN apt-get update \
