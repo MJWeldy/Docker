@@ -30,14 +30,14 @@ RUN apt-get install -y r-cran-rcpp r-cran-rcppeigen
 #General R packages 
 #RUN R -e "install.packages('rcppeigen', repos='http://cran.rstudio.com/')"
 
-#RUN install2.r --error \
-#  --repos "https://stat.ethz.ch/CRAN/" \
-#  styler \
-#  datapasta \
-#  bayesplot \
-#  #tidybayes \
-#  coda \
-#  igraph 
+RUN install2.r --error \
+  --repos "https://stat.ethz.ch/CRAN/" \
+  styler \
+  datapasta \
+  bayesplot \
+  tidybayes \
+  coda \
+  igraph 
   
 ##JAGS
 #RUN apt-get install -y --no-install-recommends \
