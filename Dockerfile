@@ -16,9 +16,9 @@ RUN apt-get update
 
 ##Reticulate
 ##RUN echo "RETICULATE_PYTHON = '/opt/venv/reticulate/bin/python'" > .Renviron
-#RUN install2.r --error \
-#  --repos "https://stat.ethz.ch/CRAN/" \
-#  reticulate
+RUN install2.r --error \
+  --repos "https://stat.ethz.ch/CRAN/" \
+  reticulate
   
 #USETHIS for github token 
 # WRITE RETICULATE_PYTHON VARIABLE IN .Renviron
