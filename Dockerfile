@@ -45,11 +45,11 @@ RUN apt-get install -y --no-install-recommends \
   mercurial gdal-bin libgdal-dev gsl-bin libgsl-dev \ 
   libc6-i386
 
-#RUN install2.r --error \
-#  --repos "https://stat.ethz.ch/CRAN/" \
-#  rjags \
-#  R2jags \ 
-#  jagsUI 
+RUN install2.r --error \
+  --repos "https://stat.ethz.ch/CRAN/" \
+  rjags \
+  R2jags \ 
+  jagsUI 
   
 ##Nimble
 #RUN install2.r --error \
