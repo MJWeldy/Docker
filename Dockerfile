@@ -25,7 +25,7 @@ RUN install2.r --error \
 #RUN echo "RETICULATE_PYTHON = '/opt/venv/reticulate/bin/python'" > .Renviron
 
 # adding deps separately so it may build in dockerhub (works on my WS)
-#RUN apt-get install -y r-cran-rcpp r-cran-rcppeigen
+RUN apt-get install -y r-cran-rcpp r-cran-rcppeigen
 
 #General R packages 
 #RUN R -e "install.packages('rcppeigen', repos='http://cran.rstudio.com/')"
