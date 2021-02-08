@@ -40,10 +40,10 @@ RUN install2.r --error \
   igraph 
   
 ##JAGS
-#RUN apt-get install -y --no-install-recommends \
-#  jags \
-#  mercurial gdal-bin libgdal-dev gsl-bin libgsl-dev \ 
-#  libc6-i386
+RUN apt-get install -y --no-install-recommends \
+  jags \
+  mercurial gdal-bin libgdal-dev gsl-bin libgsl-dev \ 
+  libc6-i386
 
 #RUN install2.r --error \
 #  --repos "https://stat.ethz.ch/CRAN/" \
